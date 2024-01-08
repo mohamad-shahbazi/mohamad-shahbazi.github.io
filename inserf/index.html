@@ -174,23 +174,15 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <img id="teaser" width="100%" src="./static/images/teaser.png" 
-               alt="teaser."/>
-      </img>
-      <h2 class="subtitle has-text-centered">
-        <span class="inserf">InseRF</span> generates an object in a 3D scene via a text prompt and one 2D bounding box.
-      </h2>
+      <div class="has-text-centered">
+        <video id="teaser" controls autoplay muted loop playsinline height="100">
+          <source src="./static/videos/teaser.mp4"
+                  type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="nerfies">InseRF</span> generates an object in a 3D scene<br> via a text prompt and one 2D bounding box.
+        </h2>
+      </div>
     </div>
   </div>
 </section>
@@ -206,7 +198,9 @@
           <p>
             We introduce InseRF, a novel method for generative object insertion in the NeRF reconstructions of 3D scenes. Based on a user-provided textual description and a 2D bounding box in a reference viewpoint, InseRF generates new objects in 3D scenes. Recently, methods for 3D scene editing have been profoundly transformed, owing to the use of strong priors of text-to-image diffusion models in 3D generative modeling. Existing methods are mostly effective in editing 3D scenes via style and appearance changes or removing existing objects. Generating new objects, however, remains a challenge for such methods, which we address in this study. Specifically, we propose grounding the 3D object insertion to a 2D object insertion in a reference view of the scene. The 2D edit is then lifted to 3D using a single-view object reconstruction method. The reconstructed object is then inserted into the scene, guided by the priors of monocular depth estimation methods. We evaluate our method on various 3D scenes and provide an in-depth analysis of the proposed components. Our experiments with generative insertion of objects in several 3D scenes indicate the effectiveness of our method compared to the existing methods. InseRF is capable of controllable and 3D-consistent object insertion without requiring explicit 3D information as input.
           </p>
-          </p>
+      <img id="teaser" width="100%" src="./static/images/teaser.png" 
+               alt="teaser."/>
+      </img>
         </div>
       </div>
     </div>
