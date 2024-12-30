@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Roboto&display=swap"
     rel="stylesheet"
   />
 
@@ -49,15 +49,16 @@
     a {
       color: #007bff;
       text-decoration: none;
+      transition: opacity 0.3s ease;
     }
     a:hover {
       opacity: 0.8;
     }
     h1, h2, h3, h4 {
       font-family: "Quicksand", sans-serif;
-      font-weight: 600;
-      color: #2c3e50;
       margin-bottom: 0.5em;
+      color: #2c3e50;
+      line-height: 1.2;
     }
 
     /* NAVBAR */
@@ -80,8 +81,8 @@
       padding: 1rem;
     }
     nav .nav-title {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.4rem;
+      font-weight: 700;
       color: #2c3e50;
     }
     nav ul {
@@ -93,6 +94,7 @@
       font-size: 0.95rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      font-weight: 600;
     }
     /* Nav scroll shrink effect */
     .scrolled {
@@ -108,31 +110,36 @@
       align-items: center;
       justify-content: center;
       background: linear-gradient(
-        to right,
-        rgba(44, 62, 80, 0.95),
-        rgba(52, 152, 219, 0.95)
+        135deg,
+        rgba(44, 62, 80, 0.9) 0%,
+        rgba(52, 152, 219, 0.9) 100%
       );
       color: #fff;
       text-align: center;
       padding: 3rem 1rem;
       margin-top: 60px; /* offset for fixed nav */
+      position: relative;
+      overflow: hidden;
     }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      font-weight: 700;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 1.5rem;
+      font-weight: 400;
     }
     .hero .social-links a {
       color: #fff;
       font-size: 1.1rem;
-      margin: 0 0.5rem;
+      margin: 0 0.7rem;
       transition: color 0.3s ease;
+      font-weight: 600;
     }
     .hero .social-links a:hover {
-      color: #ffeb3b;
+      color: #ffe580; /* lighter yellow on hover */
     }
     .profile-image {
       width: 180px;
@@ -141,6 +148,10 @@
       margin: 2rem 0 1rem 0;
       object-fit: cover;
       border: 3px solid #fff;
+      transition: transform 0.3s ease;
+    }
+    .profile-image:hover {
+      transform: scale(1.05);
     }
 
     /* MAIN CONTENT WRAPPER */
@@ -151,21 +162,30 @@
     }
 
     /* CARD STYLE SHARED */
-    .card {
+    section {
       background: #fff;
+    }
+    .card {
       border-radius: 10px;
       padding: 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
     }
     .card h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
+      font-weight: 700;
+      color: #2c3e50;
     }
     .card p {
       margin-bottom: 1rem;
       text-align: justify;
       line-height: 1.7;
+      font-weight: 400;
     }
 
     /* INTERESTS SECTION */
@@ -177,11 +197,16 @@
     }
     .interests-card .badge {
       display: inline-block;
-      background-color: #e2e2e2;
-      color: #555;
-      padding: 0.4rem 0.9rem;
+      background: #007bff;
+      color: #fff;
+      padding: 0.45rem 0.9rem;
       border-radius: 20px;
       font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .interests-card .badge:hover {
+      background: #005bbf;
     }
 
     /* EXPERIENCE SECTION - SINGLE COLUMN */
@@ -195,13 +220,19 @@
       background-color: #fff;
       padding: 1.2rem 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .experience-card .exp-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
     }
     .experience-card .exp-item strong {
       display: block;
       margin-bottom: 0.3rem;
       font-size: 1.1rem;
       color: #2c3e50;
+      font-weight: 700;
     }
     .experience-card .date {
       float: right;
@@ -219,16 +250,22 @@
     .pub-card {
       background: #fff;
       border-radius: 8px;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pub-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
     .pub-card h3 {
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       color: #2c3e50;
+      font-weight: 700;
     }
     .pub-card .meta {
       font-size: 0.9rem;
@@ -242,19 +279,31 @@
       font-style: italic;
       color: #555;
     }
+
+    /* New button styling for Paper/Code/Project links */
     .pub-links {
       margin-top: auto;
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
     .pub-links a {
-      font-size: 0.9rem;
-      color: #007bff;
-      display: flex;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff; /* text color on button */
+      background: #007bff; /* button background color */
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      display: inline-flex;
       align-items: center;
       gap: 0.3rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
     }
-    .pub-links i {
+    .pub-links a:hover {
+      background: #005bbf;
+    }
+    .pub-links a i {
       font-size: 1rem;
     }
 
@@ -262,7 +311,12 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      color: #777;
+      color: #666;
+      background: #fff;
+      font-weight: 400;
+    }
+    footer p {
+      margin: 0.5rem 0;
     }
 
     /* RESPONSIVE */
@@ -271,16 +325,20 @@
         display: none;
       }
       .hero h1 {
-        font-size: 2.25rem;
+        font-size: 2.3rem;
       }
       .hero p {
-        font-size: 1.05rem;
+        font-size: 1rem;
       }
       .card {
         padding: 1.5rem;
       }
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+      }
+      .profile-image {
+        width: 150px;
+        height: 150px;
       }
     }
   </style>
@@ -311,7 +369,7 @@
     <p>Machine Learning Engineer at Apple<br>Zurich, Switzerland</p>
     <div class="social-links">
       <a href="https://scholar.google.ch/citations?hl=en&user=0nGkMM8AAAAJ" target="_blank"
-        ><i class="fas fa-graduation-cap"></i> Google Scholar</a
+        ><i class="fas fa-graduation-cap"></i> Scholar</a
       >
       <a href="https://www.linkedin.com/in/mohamad-shahbazi/" target="_blank"
         ><i class="fab fa-linkedin"></i> LinkedIn</a
@@ -331,12 +389,11 @@
     <section id="about" class="card">
       <h2>About Me</h2>
       <p>
-        I am a Machine Learning engineer at Apple Zurich, working on different
-        topics in Machine Learning and Computer Vision. Currently, I focus on
-        3D Generation and Neural Rendering for Digital Humans.
+        I am a Machine Learning engineer at Apple Zurich, working on various topics in
+        Machine Learning and Computer Vision. Currently, I am focused on 3D Generative Models and Neural Rendering for Digital Humans.
       </p>
       <p>
-        Previously, I did my PhD on 2D and 3D Generative Models at the
+        Previously, I pursued my PhD in 2D and 3D Generative Models at the
         <a href="http://www.vision.ee.ethz.ch/" target="_blank"
           >Computer Vision Lab (CVL)</a
         >
@@ -352,6 +409,7 @@
     <!-- ========== INTERESTS SECTION ========== -->
     <section id="interests" class="card interests-card">
       <h2>Research Interests</h2>
+      <p>Here are some areas I’m actively exploring:</p>
       <div class="interest-badges">
         <span class="badge">Machine Learning</span>
         <span class="badge">Computer Vision</span>
@@ -370,23 +428,24 @@
           <strong>Machine Learning Engineer at Apple Switzerland</strong>
           <span class="date">08/2024 - Current</span>
           <p style="margin-top: 0.5rem;">
-            Working on 3D Computer Vision and Generative Models.
+            Working on advanced 3D Computer Vision and Generative Models with a focus on
+            neural rendering pipelines.
           </p>
         </div>
         <div class="exp-item">
           <strong>Applied Science Intern at Microsoft UK</strong>
           <span class="date">01/2024 - 06/2024</span>
           <p style="margin-top: 0.5rem;">
-            Worked on location modeling for object placement in images using
-            vision-language models.
+            Researched location modeling for object placement in images using
+            cutting-edge vision-language models.
           </p>
         </div>
         <div class="exp-item">
           <strong>Research Intern at Google Switzerland</strong>
           <span class="date">06/2023 - 09/2023</span>
           <p style="margin-top: 0.5rem;">
-            Worked on 3D editing of 3D scenes using Diffusion Models and Neural
-            Radiance Fields.
+            Contributed to 3D editing of scenes through Diffusion Models and
+            Neural Radiance Fields.
           </p>
         </div>
       </div>
@@ -396,11 +455,15 @@
     <section id="publications" class="card">
       <h2>Publications</h2>
       <div class="pub-card-grid">
+
         <!-- Publication 1 -->
         <div class="pub-card">
           <h3>InseRF: Text-Driven Generative Object Insertion in Neural 3D Scenes</h3>
           <div class="meta">
-            <p>M. Shahbazi*, L. Claessens*, M. Niemeyer, E. Collins, A. Tonioni, L. Van Gool, F. Tombari</p>
+            <p>
+              M. Shahbazi, L. Claessens, M. Niemeyer, E. Collins, A. Tonioni,
+              L. Van Gool, F. Tombari
+            </p>
             <em>ArXiv 2024</em>
           </div>
           <div class="pub-links">
@@ -456,7 +519,10 @@
         <div class="pub-card">
           <h3>NeRF-GAN Distillation for Efficient 3D-Aware Generation with Convolutions</h3>
           <div class="meta">
-            <p>M. Shahbazi, E. Ntavelis, A. Tonioni, E. Collins, D. P. Paudel, M. Danelljan, L. Van Gool</p>
+            <p>
+              M. Shahbazi, E. Ntavelis, A. Tonioni, E. Collins,
+              D. P. Paudel, M. Danelljan, L. Van Gool
+            </p>
             <em>ICCVW 2023</em>
           </div>
           <div class="pub-links">
@@ -474,9 +540,12 @@
 
         <!-- Publication 5 -->
         <div class="pub-card">
-          <h3>Diffdreamer: Towards consistent unsupervised single-view scene extrapolation with conditional diffusion models</h3>
+          <h3>Diffdreamer: Towards Consistent Unsupervised Single-View Scene Extrapolation with Conditional Diffusion Models</h3>
           <div class="meta">
-            <p>S. Cai, E. R. Chan, S. Peng, M. Shahbazi, A. Obukhov, L. Van Gool, G. Wetzstein</p>
+            <p>
+              S. Cai, E. R. Chan, S. Peng, M. Shahbazi, A. Obukhov,
+              L. Van Gool, G. Wetzstein
+            </p>
             <em>ICCV 2023</em>
           </div>
           <div class="pub-links">
@@ -499,7 +568,10 @@
         <div class="pub-card">
           <h3>A Continual Deepfake Detection Benchmark: Dataset, Methods, and Essentials</h3>
           <div class="meta">
-            <p>C. Li, Z. Huang, D. P. Paudel, Y. Wang, M. Shahbazi, X. Hong, L. Van Gool</p>
+            <p>
+              C. Li, Z. Huang, D. P. Paudel, Y. Wang, M. Shahbazi, X. Hong,
+              L. Van Gool
+            </p>
             <em>WACV 2023</em>
           </div>
           <div class="pub-links">
@@ -516,7 +588,9 @@
         <div class="pub-card">
           <h3>Training Dynamics Aware Neural Network Optimization with Stabilization</h3>
           <div class="meta">
-            <p>Z. Fang, M. Shahbazi, T. Probst, D. P. Paudel, L. Van Gool</p>
+            <p>
+              Z. Fang, M. Shahbazi, T. Probst, D. P. Paudel, L. Van Gool
+            </p>
             <em>ACCV 2023</em>
           </div>
           <div class="pub-links">
@@ -534,9 +608,12 @@
 
         <!-- Publication 8 -->
         <div class="pub-card">
-          <h3>Arbitrary-scale image synthesis</h3>
+          <h3>Arbitrary-Scale Image Synthesis</h3>
           <div class="meta">
-            <p>E. Ntavelis, M. Shahbazi, I. Kastanis, R. Timofte, M. Danelljan, L. Van Gool</p>
+            <p>
+              E. Ntavelis, M. Shahbazi, I. Kastanis, R. Timofte,
+              M. Danelljan, L. Van Gool
+            </p>
             <em>CVPR 2022</em>
           </div>
           <div class="pub-links">
@@ -554,9 +631,11 @@
 
         <!-- Publication 9 -->
         <div class="pub-card">
-          <h3>Collapse by conditioning: Training class-conditional GANs with limited data</h3>
+          <h3>Collapse by Conditioning: Training Class-Conditional GANs with Limited Data</h3>
           <div class="meta">
-            <p>M. Shahbazi, M. Danelljan, D. P. Paudel, L. Van Gool</p>
+            <p>
+              M. Shahbazi, M. Danelljan, D. P. Paudel, L. Van Gool
+            </p>
             <em>ICLR 2022</em>
           </div>
           <div class="pub-links">
@@ -576,7 +655,9 @@
         <div class="pub-card">
           <h3>Efficient Conditional GAN Transfer with Knowledge Propagation across Classes</h3>
           <div class="meta">
-            <p>M. Shahbazi, Z. Huang, D. P. Paudel, A. Chhatkuli, L. Van Gool</p>
+            <p>
+              M. Shahbazi, Z. Huang, D. P. Paudel, A. Chhatkuli, L. Van Gool
+            </p>
             <em>CVPR 2021</em>
           </div>
           <div class="pub-links">
@@ -591,7 +672,7 @@
 
         <!-- Publication 11 -->
         <div class="pub-card">
-          <h3>A Generalizable Model for Seizure Prediction based on Deep Learning using CNN-LSTM Architecture</h3>
+          <h3>A Generalizable Model for Seizure Prediction using CNN-LSTM Architecture</h3>
           <div class="meta">
             <p>M. Shahbazi, H. Aghajan</p>
             <em>IEEE GlobalSIP 2018</em>
