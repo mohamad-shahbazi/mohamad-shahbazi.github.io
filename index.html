@@ -1,279 +1,629 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Mohamad Shahbazi's homepage</title>
-	<style>
+  <meta charset="UTF-8" />
+  <title>Mohamad Shahbazi - Modern Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		@media screen and (max-device-width: 480px){
-  			body{-webkit-text-size-adjust: none;}
-		}
-		p { font-size : 16px; text-align: justify; text-justify: inter-word;}
-		ul {text-align: justify;  text-justify: inter-word;}
-		h1 { padding : 0; margin : 0; font-size : 34px; }
-		h2 { font-size : 20px; margin : 0; padding : 0; }
-		body { padding : 0; font-family : Arial; font-size : 16px; background-color : #fff; }
-		.title { width : 700px; margin : 20px auto; }
-		.container { width : 700px; margin : 20px auto; border-radius: 10px;  background-color : #fff; padding : 20px;  clear:both;}
-		.education {display: inline-block;}
-		#bio {padding-top : 40px;}
-		#me { border : 0 solid black; margin-bottom : 50px; border-radius : 10px; }
-		#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
-		a { text-decoration : none; }
-		a:hover { text-decoration : underline; }
-		a, a:visited { color : #0050e7; }
-		.publogo { width: 100 px; margin-right : 20px; float : left; border : 0;}
-		.publication { clear : left; padding-bottom : 0px; }
-		.publication p { height : 100px; padding-top : 5px;}
-		.publication strong a { color : #0000A0; }
-		.publication .links { position : relative; top : 15px }
-		.publication .links a { margin-right : 20px; }
-		.codelogo { margin-right : 10px; float : left; border : 0;}
-		.code { clear : left; padding-bottom : 10px; vertical-align :middle;} 
-		.code .download a { display : block; margin : 0 15px; float : left;}
-		.code strong a { color : #000; }
-		.external a { margin-right : 15px; }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto&display=swap"
+    rel="stylesheet"
+  />
 
-	</style>
-	<!--<script async="" src="//www.google-analytics.com/analytics.js"></script> -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109828585-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnN4tjmuYP0E5sXQpX3GtBtuR4oGrv81AD3C1EAVaoW0dkKFSf1DqpWq2i6Utq2pwZVfz/afg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-	  gtag('config', 'UA-109828585-1');
-	</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109828585-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-109828585-1');
+  </script>
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* BASIC STYLES */
+    body {
+      font-family: "Quicksand", "Roboto", sans-serif;
+      color: #333;
+      background-color: #fafafa;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      opacity: 0.8;
+    }
+    h1, h2, h3, h4 {
+      font-family: "Quicksand", sans-serif;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 0.5em;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+    nav .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    nav .nav-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav li {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    /* Nav scroll shrink effect */
+    .scrolled {
+      padding: 0.5rem !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      width: 100%;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(
+        to right,
+        rgba(44, 62, 80, 0.95),
+        rgba(52, 152, 219, 0.95)
+      );
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      margin-top: 60px; /* offset for fixed nav */
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero .social-links a {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    .hero .social-links a:hover {
+      color: #ffeb3b;
+    }
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin: 2rem 0 1rem 0;
+      object-fit: cover;
+      border: 3px solid #fff;
+    }
+
+    /* MAIN CONTENT WRAPPER */
+    main {
+      max-width: 1100px;
+      width: 90%;
+      margin: 2rem auto;
+    }
+
+    /* CARD STYLE SHARED */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+    .card h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .card p {
+      margin-bottom: 1rem;
+      text-align: justify;
+      line-height: 1.7;
+    }
+
+    /* INTERESTS SECTION */
+    .interests-card .interest-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .interests-card .badge {
+      display: inline-block;
+      background-color: #e2e2e2;
+      color: #555;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* EXPERIENCE SECTION - SINGLE COLUMN */
+    .experience-card .exp-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .experience-card .exp-item {
+      background-color: #fff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    .experience-card .exp-item strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+    .experience-card .date {
+      float: right;
+      font-weight: 600;
+      color: #555;
+    }
+
+    /* PUBLICATIONS SECTION - SINGLE COLUMN */
+    .pub-card-grid {
+      display: flex;
+      flex-direction: column; /* single column */
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .pub-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pub-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    .pub-card .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .pub-card .meta em {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #555;
+    }
+    .pub-links {
+      margin-top: auto;
+      display: flex;
+      gap: 1rem;
+    }
+    .pub-links a {
+      font-size: 0.9rem;
+      color: #007bff;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .pub-links i {
+      font-size: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #777;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-	<div class="title">
-		<div id="sidebar"><img src="static/images/me.png" vspace="50 px" width="200 px" id="me" itemprop="photo"></div>
-		<div id="bio">
-			<h1>
-				<span itemprop="name">Mohamad Shahbazi</span>
-			</h1>
-			<p style="line-height:23px;">
-				Machine Learning Engineer<br>
-				Apple<br>
-				Zurich, Switzerland
-			</p>
-			<p class="external">
-				<font color="#C0C0C0"> <a href="https://scholar.google.ch/citations?hl=en&user=0nGkMM8AAAAJ">Google Scholar</a> </font>
-				<font color="#C0C0C0"> <a href="https://www.linkedin.com/in/mohamad-shahbazi/">Linkedin</a> </font>
-				<font color="#C0C0C0"> <a href="https://github.com/mshahbazi72">Github</a> </font>
-                                <font color="#C0C0C0"> <a href="https://twitter.com/MShahbazi_">Twitter</a> </font>
-				<!--<a href="papers/CV_ZhiwuHuang.pdf" class="first">CV</a>-->
-				<!--<font color="#77787b">CV</font>-->
-			</p>
-		</div>
-	</div>
-
-	<div class="container">
-		<h2>About Me</h2>
-		<p>
-			I am a Machine Learning engineer at Apple Zurich. I work on different topics in Machine Learning and Computer Vision. Currently, I focus on Neural Rendering and 3D Generation.
-			Previously, I did my PhD on 2D and 3D Generative Models at the <a href="http://www.vision.ee.ethz.ch/">Computer Vision Lab (CVL)</a> at ETH Zurich under the supervision of Prof. <a href="https://ee.ethz.ch/de/departement/professoren/Emeritierte/kontaktdetails-emeriti.OTAyMzM=.TGlzdC8xODc5LC05MjU0NzU1MDE=.html">Luc Van Gool</a>.
-		</p>
-
-	</div>
-	
-	<div class="container">
-		<h2>Research Interests</h2>
-		<ul>
-			<li>
-			Computer Vision
-			</li>
-			<li>
-			Generative Models
-			</li>
-			<li>
-			Neural Rendering
-			</li>
-			<li>
-			Vision-Language Models
-			</li>
-		</ul>
-	</div>
-			  
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-content">
+      <div class="nav-title">Mohamad Shahbazi</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
     </div>
-	
-<div class="container">
-	<h2>Experiences</h2>
-	<ul>
-			<li> <span><strong>Machine Learning Engineer at Apple Switzerland</strong></span> <span style="float:right">08/2024 - Current</span> <br>
-				Working on 3D Computer Vision and Generative Models.
-			</li><br>
-			<li> <span><strong>Applied Scienece Intern at Microsoft UK</strong></span> <span style="float:right">01/2024 - 06/2024</span> <br>
-				Worked on location modeling for object placement in images using vision-language models.
-			</li><br>
-			<li> <strong>Research Intern at Google Switzerland</strong> <span style="float:right">06/2023 - 09/2023</span> <br>
-				Worked on 3D editing of 3D scenes using Diffusion Models and Neural Radiance Fields.
-    	</li>
-	</div>
-	
-	
-	
-	<div class="container">
-		<h2>Publications</h2>
-		<ul>
-			<li>	
-				<strong>
-	      	InseRF: Text-Driven Generative Object Insertion in Neural 3D Scenes
-        </strong>
-        <br>
-	         M. Shahbazi*, L. Claessens*, M. Niemeyer, E. Collins, A. Tonioni, L. Van Gool, F. Tombari.  
-				<br>
-				<a href="https://arxiv.org/pdf/2401.05335">Paper</a> | 
-				<a href="https://mohamad-shahbazi.github.io/inserf/">Project Page</a>
-			</li>
-			<li>	
-				<strong>
-	      	Taming the Tail in Class-Conditional GANs: Knowledge Sharing via Unconditional Training at Lower Resolutions
-        </strong>
-        <br>
-	         S. Khorram, M. Jiang, M. Shahbazi, MH. Danesh, L. Fuxin
-				<br>
-				<em>CVPR 2024</em> 
-				<br>
-				<a href="https://openaccess.thecvf.com/content/CVPR2024/papers/Khorram_Taming_the_Tail_in_Class-Conditional_GANs_Knowledge_Sharing_via_Unconditional_CVPR_2024_paper.pdf">Paper</a> | <a href="https://github.com/khorrams/utlo">Code</a>
-			</li>
-			<li>	
-				<strong>
-	      	StyleGenes: Discrete and Efficient Latent Distributions for GANs
-        </strong>
-        <br>
-	         E. Ntavelis, M. Shahbazi, I. Kastanis, M. Danelljan, L. Van Gool.  
-				<br>
-				<em>WACV 2024</em> 
-				<br>
-				<a href="https://openaccess.thecvf.com/content/WACV2024/papers/Ntavelis_StyleGenes_Discrete_and_Efficient_Latent_Distributions_for_GANs_WACV_2024_paper.pdf">Paper</a>
-			</li>
-			<li>	
-				<strong>
-	      	NeRF-GAN Distillation for Efficient 3D-Aware Generation with Convolutions
-        </strong>
-        <br>
-	         M. Shahbazi, E. Ntavelis, A. Tonioni, E. Collins, D. P. Paudel, M. Danelljan, L. Van Gool.  
-				<br>
-				<em>ICCVW 2023</em> 
-				<br>
-				<a href="https://arxiv.org/pdf/2303.12865">Paper</a> | 
-				<a href="https://github.com/mshahbazi72/NeRF-GAN-Distillation">Code</a>
-			</li>
-			<li>	
-				<strong>
-	      	Diffdreamer: Towards consistent unsupervised single-view scene extrapolation with conditional diffusion models
-        </strong>
-        <br>
-	         S. Cai, E. R. Chan, S. Peng, M. Shahbazi, A. Obukhov, L. Van Gool, G. Wetzstein.  
-				<br>
-				<em>ICCV 2023</em> 
-				<br>
-				<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Cai_DiffDreamer_Towards_Consistent_Unsupervised_Single-view_Scene_Extrapolation_with_Conditional_Diffusion_ICCV_2023_paper.pdf">Paper</a> | 
-				<a href="https://primecai.github.io/diffdreamer">Project Page</a> | 
-				<a href="https://github.com/primecai/DiffDreamer">Code</a>
+  </nav>
 
-			</li>
-			<li>	
-				<strong>
-				       A Continual Deepfake Detection Benchmark: Dataset, Methods, and Essentials
-		                </strong>
-		                <br>
-                	         C. Li, Z. Huang, D. P. Paudel, Y. Wang, M. Shahbazi, X. Hong, L. Van Gool.  
-				<br>
-				<em>WACV 2023</em> 
-				<br>
-				<a href="https://arxiv.org/abs/2205.05467">Paper</a>  | <a href="https://github.com/Coral79/CDDB">Code</a> 
-			</li>
+  <!-- ========== HERO SECTION ========== -->
+  <header class="hero">
+    <img
+      src="static/images/me.png"
+      alt="Mohamad Shahbazi profile picture"
+      class="profile-image"
+    />
+    <h1>Mohamad Shahbazi</h1>
+    <p>Machine Learning Engineer at Apple<br>Zurich, Switzerland</p>
+    <div class="social-links">
+      <a href="https://scholar.google.ch/citations?hl=en&user=0nGkMM8AAAAJ" target="_blank"
+        ><i class="fas fa-graduation-cap"></i> Google Scholar</a
+      >
+      <a href="https://www.linkedin.com/in/mohamad-shahbazi/" target="_blank"
+        ><i class="fab fa-linkedin"></i> LinkedIn</a
+      >
+      <a href="https://github.com/mshahbazi72" target="_blank"
+        ><i class="fab fa-github"></i> GitHub</a
+      >
+      <a href="https://twitter.com/MShahbazi_" target="_blank"
+        ><i class="fab fa-twitter"></i> Twitter</a
+      >
+    </div>
+  </header>
 
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I am a Machine Learning engineer at Apple Zurich, working on different
+        topics in Machine Learning and Computer Vision. Currently, I focus on
+        3D Generation and Neural Rendering for Digital Humans.
+      </p>
+      <p>
+        Previously, I did my PhD on 2D and 3D Generative Models at the
+        <a href="http://www.vision.ee.ethz.ch/" target="_blank"
+          >Computer Vision Lab (CVL)</a
+        >
+        at ETH Zurich under the supervision of
+        <a
+          href="https://ee.ethz.ch/de/departement/professoren/Emeritierte/kontaktdetails-emeriti.OTAyMzM=.TGlzdC8xODc5LC05MjU0NzU1MDE=.html"
+          target="_blank"
+          >Prof. Luc Van Gool</a
+        >.
+      </p>
+    </section>
 
-			<li>	
-				<strong>
-				      Training Dynamics Aware Neural Network Optimization with Stabilization
-		                </strong>
-		                <br>
-                	         Z. Fang, M. Shahbazi, T. Probst,  D. P. Paudel, L. Van Gool.  
-				<br>
-				<em>ACCV 2023</em> 
-				<br>
-				<a href="https://openaccess.thecvf.com/content/ACCV2022/papers/Fang_Training_Dynamics_Aware_Neural_Network_Optimization_with_Stabilization_ACCV_2022_paper.pdf">Paper</a> | <a href="https://github.com/fangzl123/stableTrain">Code</a> 
-			</li>
+    <!-- ========== INTERESTS SECTION ========== -->
+    <section id="interests" class="card interests-card">
+      <h2>Research Interests</h2>
+      <div class="interest-badges">
+        <span class="badge">Machine Learning</span>
+        <span class="badge">Computer Vision</span>
+        <span class="badge">Generative Models</span>
+        <span class="badge">Neural Rendering</span>
+        <span class="badge">Vision-Language Models</span>
+        <span class="badge">Digital Humans</span>
+      </div>
+    </section>
 
-			<li>	
-				<strong>
-				       Arbitrary-scale image synthesis 
-		                </strong>
-		                <br>
-                	         E. Ntavelis, M. Shahbazi, I. Kastanis, R. Timofte, M. Danelljan, L. Van Gool.  
-				<br>
-				<em>CVPR 2022</em> 
-				<br>
-				<a href="https://openaccess.thecvf.com/content/CVPR2022/html/Ntavelis_Arbitrary-Scale_Image_Synthesis_CVPR_2022_paper.html">Paper</a> | <a href="https://github.com/vglsd/ScaleParty">Code</a> 
-			</li>
+    <!-- ========== EXPERIENCE SECTION (SINGLE COLUMN) ========== -->
+    <section id="experience" class="card experience-card">
+      <h2>Experience</h2>
+      <div class="exp-cards">
+        <div class="exp-item">
+          <strong>Machine Learning Engineer at Apple Switzerland</strong>
+          <span class="date">08/2024 - Current</span>
+          <p style="margin-top: 0.5rem;">
+            Working on 3D Computer Vision and Generative Models.
+          </p>
+        </div>
+        <div class="exp-item">
+          <strong>Applied Science Intern at Microsoft UK</strong>
+          <span class="date">01/2024 - 06/2024</span>
+          <p style="margin-top: 0.5rem;">
+            Worked on location modeling for object placement in images using
+            vision-language models.
+          </p>
+        </div>
+        <div class="exp-item">
+          <strong>Research Intern at Google Switzerland</strong>
+          <span class="date">06/2023 - 09/2023</span>
+          <p style="margin-top: 0.5rem;">
+            Worked on 3D editing of 3D scenes using Diffusion Models and Neural
+            Radiance Fields.
+          </p>
+        </div>
+      </div>
+    </section>
 
-			<li>	
-				<strong>
-					Collapse by conditioning: Training class-conditional GANs with limited data
-		                </strong>
-		                <br>
-                		M. Shahbazi, M. Danelljan, D. P. Paudel, L. Van Gool.  
-				<br>
-				<em>ICLR 2022</em> 
-				<br>
-				<a href="https://arxiv.org/abs/2201.06578">Paper</a> | <a href="https://github.com/mshahbazi72/transitional-cGAN">Code</a> 
-			</li>
+    <!-- ========== PUBLICATIONS SECTION (SINGLE COLUMN) ========== -->
+    <section id="publications" class="card">
+      <h2>Publications</h2>
+      <div class="pub-card-grid">
+        <!-- Publication 1 -->
+        <div class="pub-card">
+          <h3>InseRF: Text-Driven Generative Object Insertion in Neural 3D Scenes</h3>
+          <div class="meta">
+            <p>M. Shahbazi*, L. Claessens*, M. Niemeyer, E. Collins, A. Tonioni, L. Van Gool, F. Tombari</p>
+            <em>ArXiv 2024</em>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2401.05335" target="_blank">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://mohamad-shahbazi.github.io/inserf/" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Project Page
+            </a>
+          </div>
+        </div>
 
-			<li>	
-				<strong>
-					Efficient Conditional GAN Transfer with Knowledge Propagation across Classes 
-		                </strong>
-		                <br>
-                		M. Shahbazi, Z. Huang, D. P. Paudel, A. Chhatkuli, L. Van Gool.  
-				<br>
-				<em>CVPR 2021</em> 
-				<br>
-				<a href="https://arxiv.org/abs/2102.06696">Paper</a> | <a href="https://github.com/mshahbazi72/cGANTransfer">Code</a> 
-			</li>
+        <!-- Publication 2 -->
+        <div class="pub-card">
+          <h3>
+            Taming the Tail in Class-Conditional GANs: Knowledge Sharing via Unconditional Training at Lower Resolutions
+          </h3>
+          <div class="meta">
+            <p>S. Khorram, M. Jiang, M. Shahbazi, MH. Danesh, L. Fuxin</p>
+            <em>CVPR 2024</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://openaccess.thecvf.com/content/CVPR2024/papers/Khorram_Taming_the_Tail_in_Class-Conditional_GANs_Knowledge_Sharing_via_Unconditional_CVPR_2024_paper.pdf"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/khorrams/utlo" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
 
-			<li>
-		        	<strong>
-					A Generalizable Model for Seizure Prediction based on Deep Learning using CNN-LSTM Architecture 
-		                </strong>
-		                <br>
-                		M. Shahbazi, H. Aghajan.  
-				<br>
-				<em>IEEE Global Conference on Signal and Information Processing (GlobalSIP). IEEE, 2018 </em> 
-				<br>
-				<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8646505">Paper</a>
-			</li>
-     		</ul>
-		<br>	
-		
-	 </div>
+        <!-- Publication 3 -->
+        <div class="pub-card">
+          <h3>StyleGenes: Discrete and Efficient Latent Distributions for GANs</h3>
+          <div class="meta">
+            <p>E. Ntavelis, M. Shahbazi, I. Kastanis, M. Danelljan, L. Van Gool</p>
+            <em>WACV 2024</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://openaccess.thecvf.com/content/WACV2024/papers/Ntavelis_StyleGenes_Discrete_and_Efficient_Latent_Distributions_for_GANs_WACV_2024_paper.pdf"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+          </div>
+        </div>
 
-	
-	<!--div class="container">
-    		<h2> Professional Services </h2>
-    		<ul>
-			<li>
-			Reviewer at the 33rd Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS workshop , Vancouver, Canada, 2019.
-			</li>
-			<li>
-			Reviewer at the 6th IEEE Global Conference on Signal and Information Processing (GlobalSIP), Anaheim, CA, USA, 2018.
-			</li>
+        <!-- Publication 4 -->
+        <div class="pub-card">
+          <h3>NeRF-GAN Distillation for Efficient 3D-Aware Generation with Convolutions</h3>
+          <div class="meta">
+            <p>M. Shahbazi, E. Ntavelis, A. Tonioni, E. Collins, D. P. Paudel, M. Danelljan, L. Van Gool</p>
+            <em>ICCVW 2023</em>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2303.12865" target="_blank">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a
+              href="https://github.com/mshahbazi72/NeRF-GAN-Distillation"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
 
-		</ul>
-	</div--!>
+        <!-- Publication 5 -->
+        <div class="pub-card">
+          <h3>Diffdreamer: Towards consistent unsupervised single-view scene extrapolation with conditional diffusion models</h3>
+          <div class="meta">
+            <p>S. Cai, E. R. Chan, S. Peng, M. Shahbazi, A. Obukhov, L. Van Gool, G. Wetzstein</p>
+            <em>ICCV 2023</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://openaccess.thecvf.com/content/ICCV2023/papers/Cai_DiffDreamer_Towards_Consistent_Unsupervised_Single-view_Scene_Extrapolation_with_Conditional_Diffusion_ICCV_2023_paper.pdf"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://primecai.github.io/diffdreamer" target="_blank">
+              <i class="fas fa-external-link-alt"></i> Project Page
+            </a>
+            <a href="https://github.com/primecai/DiffDreamer" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
 
-	<div class="container">
-            <a class="twitter-timeline" href="https://twitter.com/MShahbazi_?ref_src=twsrc%5Etfw">Tweets by MShahbazi_</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	</div>
+        <!-- Publication 6 -->
+        <div class="pub-card">
+          <h3>A Continual Deepfake Detection Benchmark: Dataset, Methods, and Essentials</h3>
+          <div class="meta">
+            <p>C. Li, Z. Huang, D. P. Paudel, Y. Wang, M. Shahbazi, X. Hong, L. Van Gool</p>
+            <em>WACV 2023</em>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2205.05467" target="_blank">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/Coral79/CDDB" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
 
-	
+        <!-- Publication 7 -->
+        <div class="pub-card">
+          <h3>Training Dynamics Aware Neural Network Optimization with Stabilization</h3>
+          <div class="meta">
+            <p>Z. Fang, M. Shahbazi, T. Probst, D. P. Paudel, L. Van Gool</p>
+            <em>ACCV 2023</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://openaccess.thecvf.com/content/ACCV2022/papers/Fang_Training_Dynamics_Aware_Neural_Network_Optimization_with_Stabilization_ACCV_2022_paper.pdf"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/fangzl123/stableTrain" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Publication 8 -->
+        <div class="pub-card">
+          <h3>Arbitrary-scale image synthesis</h3>
+          <div class="meta">
+            <p>E. Ntavelis, M. Shahbazi, I. Kastanis, R. Timofte, M. Danelljan, L. Van Gool</p>
+            <em>CVPR 2022</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://openaccess.thecvf.com/content/CVPR2022/html/Ntavelis_Arbitrary-Scale_Image_Synthesis_CVPR_2022_paper.html"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/vglsd/ScaleParty" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Publication 9 -->
+        <div class="pub-card">
+          <h3>Collapse by conditioning: Training class-conditional GANs with limited data</h3>
+          <div class="meta">
+            <p>M. Shahbazi, M. Danelljan, D. P. Paudel, L. Van Gool</p>
+            <em>ICLR 2022</em>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2201.06578" target="_blank">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a
+              href="https://github.com/mshahbazi72/transitional-cGAN"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Publication 10 -->
+        <div class="pub-card">
+          <h3>Efficient Conditional GAN Transfer with Knowledge Propagation across Classes</h3>
+          <div class="meta">
+            <p>M. Shahbazi, Z. Huang, D. P. Paudel, A. Chhatkuli, L. Van Gool</p>
+            <em>CVPR 2021</em>
+          </div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2102.06696" target="_blank">
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+            <a href="https://github.com/mshahbazi72/cGANTransfer" target="_blank">
+              <i class="fab fa-github"></i> Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Publication 11 -->
+        <div class="pub-card">
+          <h3>A Generalizable Model for Seizure Prediction based on Deep Learning using CNN-LSTM Architecture</h3>
+          <div class="meta">
+            <p>M. Shahbazi, H. Aghajan</p>
+            <em>IEEE GlobalSIP 2018</em>
+          </div>
+          <div class="pub-links">
+            <a
+              href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8646505"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>© 2024 | Mohamad Shahbazi</p>
+  </footer>
+
+  <!-- JavaScript for Sticky Nav Shrink on Scroll -->
+  <script>
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
 </body>
 </html>
-
